@@ -3,21 +3,18 @@ import { Ingredient } from "../../shared/ingredient.model";
 import { ADD_INGREDIENT, ADD_INGREDIENTS, DELETE_INGREDIENT, START_EDIT, STOP_EDIT, UPDATE_INGREDIENT } from "./shopping.constants";
 
 import * as shoppingListActions from './shooping.actions'
+import { ShoppinglistState } from "./shopping.state";
 
 
 //TODO Global interface for the app.
-export interface State {
-  ingredients: Ingredient[];
-  editedIngredient: Ingredient;
-  editedIngredientIndex: number;
-}
-
-export interface AppState {
-  shoppingList: State
-}
 
 
-const initialState = {
+// export interface AppState {
+//   shoppingList: State
+// }
+
+
+const initialState : ShoppinglistState = {
   ingredients: [
     new Ingredient('Apple', 5),
     new Ingredient('Tomatoes', 10),
